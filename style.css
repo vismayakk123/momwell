@@ -1,0 +1,351 @@
+/* General Styles */
+/* General Styles */
+/* General Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff; /* Light blue background as fallback */
+    color: #333;
+    line-height: 1.6;
+    background-image: url('IMG_2288.JPG');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover; /* Cover the entire viewport */
+    
+}
+
+/* ... (rest of your CSS) ... */
+
+a {
+    text-decoration: none;
+    color: #1e88e5; /* Primary blue */
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #a7cdee; /* Darker blue on hover */
+}
+
+/* Header & Navigation */
+header {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    padding: 20px;
+    text-align: right;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.main-nav {
+    display: inline-block;
+}
+
+.main-nav a {
+    background-color: #ffffff; /* Primary blue */
+    color: rgb(0, 0, 0);
+    padding: 12px 20px;
+    margin: 5px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+}
+
+.main-nav a:hover {
+    background-color: #9cc0f6; /* Darker blue on hover */
+    transform: translateY(-3px);
+}
+
+/* Hero Section */
+#hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 80vh;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero-title {
+    font-size: 3.5em;
+    color: #0d47a1; /* Darker blue title */
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hero-description {
+    font-size: 1.3em;
+    color: #000000;
+    margin-bottom: 30px;
+}
+
+/* Login/Signup */
+#login, #signup {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#login h2, #signup h2 {
+    color: #1e88e5; /* Primary blue heading */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#login input, #signup input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+#login button, #signup button {
+    background-color: #1e88e5; /* Primary blue button */
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#login button:hover, #signup button:hover {
+    background-color: #0d47a1; /* Darker blue button hover */
+    transform: translateY(-3px);
+}
+
+#login p {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Community & Mental Health */
+#community-mentalhealth {
+    padding: 30px;
+}
+
+.community-posts .post {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#community-mentalhealth textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+#community-mentalhealth button {
+    background-color: #1e88e5; /* Primary blue button */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#community-mentalhealth button:hover {
+    background-color: #0d47a1; /* Darker blue button hover */
+    transform: translateY(-3px);
+}
+
+.mental-health-resources {
+    background-color: #e3f2fd; /* Lighter blue */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.mental-health-resources h3 {
+    color: #1e88e5; /* Primary blue heading */
+    margin-bottom: 10px;
+}
+
+/* Mom Dates */
+#mom-dates {
+    padding: 30px;
+}
+
+.event-listings .event {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1);
+}
+
+#mom-dates button {
+    background-color: #1e88e5; /* Primary blue button */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#mom-dates button:hover {
+    background-color: #0d47a1; /* Darker blue button hover */
+    transform: translateY(-3px);
+}
+
+/* Resources */
+#resources {
+    padding: 30px;
+}
+
+#resources ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#resources li a {
+    display: block;
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#resources li a:hover {
+    background-color: #e0f7fa; /* Lightest blue hover */
+    transform: translateY(-3px);
+}
+
+ /* ... (your existing CSS) ... */
+
+/* ... (your existing CSS) ... */
+
+/* ... (your existing CSS) ... */
+
+#account {
+    padding: 30px;
+}
+
+.account-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.profile-photo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-photo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+#upload-button {
+    background-color: #1e88e5;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.account-options {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.notifications {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+#notification-button {
+    background: linear-gradient(135deg, #64b5f6, #1e88e5);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#notification-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.notification-dropdown {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    z-index: 1;
+    top: 100%; /* Position below the button */
+    left: 0;
+}
+
+#notification-list {
+    list-style-type: none;
+    padding: 10px;
+    margin: 0;
+}
+
+#notification-list li {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+#notification-list li:last-child {
+    border-bottom: none;
+}
+
+#notification-list p {
+    margin: 0;
+}
+
+#notification-list small {
+    color: #888;
+}
+
+.account-button {
+    background: linear-gradient(135deg, #64b5f6, #1e88e5);
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.account-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MomWell - My Account</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <a href="index.html">Home</a>
+            <a href="community-mentalhealth.html">Community & Mental Health</a>
+            <a href="momdates.html">Mom Dates</a>
+            <a href="resources.html">Resources</a>
+        </nav>
+    </header>
+    <section id="account">
+        <div class="account-container">
+            <div class="profile-photo">
+                <img src="default-flower.webp" alt="Profile Photo" id="profile-image">
+                <input type="file" id="photo-upload" accept="image/*" style="display: none;">
+                <button id="upload-button">Upload Photo</button>
+            </div>
+            <h2>My Account</h2>
+            <div class="account-options">
+                <div class="notifications">
+                    <button id="notification-button">Notifications</button>
+                    <div class="notification-dropdown" id="notification-dropdown">
+                        <ul id="notification-list">
+                        </ul>
+                    </div>
+                </div>
+                <button class="account-button" id="update-button">Update Profile</button>
+                <button class="account-button" id="logout-button">Logout</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const uploadButton = document.getElementById('upload-button');
+            const photoUpload = document.getElementById('photo-upload');
+            const profileImage = document.getElementById('profile-image');
+            const notificationList = document.getElementById('notification-list');
+            const notificationButton = document.getElementById('notification-button');
+            const notificationDropdown = document.getElementById('notification-dropdown');
+
+            uploadButton.addEventListener('click', function() {
+                photoUpload.click();
+            });
+
+            photoUpload.addEventListener('change', function() {
+                if (this.files && this.files[0]) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        profileImage.src = e.target.result;
+                    };
+                    reader.readAsDataURL(this.files[0]);
+                }
+            });
+
+            // Simulate notifications (replace with actual notification logic)
+            const notifications = [
+                { type: 'event', message: 'You have been invited to a Baby Playdate!', time: '1 hour ago' },
+                { type: 'reply', message: 'User1 replied to your post in Community & Mental Health.', time: '2 hours ago' },
+                { type: 'post', message: 'New post published in Community & Mental Health: "Tips for Sleep Training."', time: '3 hours ago' },
+            ];
+
+            notifications.forEach(notification => {
+                const listItem = document.createElement('li');
+                listItem.innerHTML = `
+                    <p><strong>${notification.type === 'event' ? 'Event Invite' : notification.type === 'reply' ? 'Reply' : 'New Post'}</strong>: ${notification.message}</p>
+                    <small>${notification.time}</small>
+                `;
+                notificationList.appendChild(listItem);
+            });
+
+            // Toggle notification dropdown
+            notificationButton.addEventListener('click', function() {
+                notificationDropdown.style.display = notificationDropdown.style.display === 'block' ? 'none' : 'block';
+            });
+
+            // Example logout function, replace with your actual logout function.
+            document.getElementById('logout-button').addEventListener('click', function(){
+                alert("You have logged out");
+                window.location.href = "index.html";
+            });
+
+            // Example update function, replace with your actual update function.
+            document.getElementById('update-button').addEventListener('click', function(){
+                alert("Profile updated");
+            });
+
+        });
+    </script>
+</body>
+</html>

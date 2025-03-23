@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MomWell - Mom Dates</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <a href="index.html">Home</a>
+            <a href="community-mentalhealth.html">Community & Mental Health</a>
+            <a href="resources.html">Resources</a>
+            <a href="account.html">My Account</a>
+        </nav>
+    </header>
+    <section id="mom-dates">
+        <h2>Mom Dates & Events</h2>
+
+        <div class="date-filters">
+            <label for="location-filter">Location:</label>
+            <select id="location-filter">
+                <option value="">All Locations</option>
+                <option value="park">Park</option>
+                <option value="cafe">Cafe</option>
+                <option value="library">Library</option>
+            </select>
+
+            <label for="time-filter">Time:</label>
+            <input type="time" id="time-filter">
+
+            <label for="date-filter">Date:</label>
+            <input type="date" id="date-filter">
+
+            <button id="filter-button">Filter</button>
+        </div>
+
+        <div class="event-listings">
+            <div class="event">
+                <h3>Baby Playdate</h3>
+                <p>Location: Park</p>
+                <p>Date: 2024-12-25</p>
+                <p>Time: 10:00</p>
+                <button class="join-button" data-event-id="1">Join</button>
+            </div>
+            <div class="event">
+                <h3>Mom's Coffee Morning</h3>
+                <p>Location: Cafe</p>
+                <p>Date: 2024-12-26</p>
+                <p>Time: 11:00</p>
+                <button class="join-button" data-event-id="2">Join</button>
+            </div>
+            <div class="event">
+                <h3>Story Time</h3>
+                <p>Location: Library</p>
+                <p>Date: 2024-12-27</p>
+                <p>Time: 14:00</p>
+                <button class="join-button" data-event-id="3">Join</button>
+            </div>
+        </div>
+
+        <div class="mother-profiles">
+            </div>
+    </section>
+
+    <script>
+    // Example javascript for event joining.
+    // Replace with your actual implementation.
+    document.addEventListener('DOMContentLoaded', function(){
+        const joinButtons = document.querySelectorAll('.join-button');
+        joinButtons.forEach(button => {
+            button.addEventListener('click', function(){
+                const eventId = this.getAttribute('data-event-id');
+                alert(`You have joined event ${eventId}`);
+            });
+        });
+    });
+    </script>
+</body>
+</html>
